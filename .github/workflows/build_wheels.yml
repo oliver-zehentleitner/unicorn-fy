@@ -24,6 +24,7 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
+          name: artifact-${{ matrix.os }}
           path: ./wheelhouse/*.whl
 
   build_sdist:
@@ -53,7 +54,6 @@ jobs:
       - name: Download Artifacts
         uses: actions/download-artifact@v3
         with:
-          name: artifact
           path: dist
 
       - name: Create GitHub Release
