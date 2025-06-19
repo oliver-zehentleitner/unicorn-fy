@@ -21,9 +21,10 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           python-version: ${{ matrix.python-version }}
+          miniconda-version: "latest"
           environment-file: environment.yml
           auto-update-conda: false
-          auto-activate-base: false
+          auto-activate-base: true
           show-channel-urls: true
 
       - name: Install Conda Tools
