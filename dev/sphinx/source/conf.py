@@ -22,7 +22,7 @@ copyright = '2023-2023, LUCIT Systems and Development. All Rights Reserved.'
 author = 'LUCIT Systems and Development'
 
 # The full version, including alpha/beta/rc tags
-release = '0.14.2'
+release = '0.14.3'
 
 html_last_updated_fmt = "%b %d %Y at %H:%M (CET)"
 

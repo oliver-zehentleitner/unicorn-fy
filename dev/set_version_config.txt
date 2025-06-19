@@ -1,2 +1,2 @@
-0.14.2
+0.14.3
 meta.yaml,pyproject.toml,setup.py,README.md,.github/workflows/build_wheels.yml,dev/sphinx/source/conf.py,unicorn_fy/unicorn_fy.py
