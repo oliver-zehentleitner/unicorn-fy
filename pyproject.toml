@@ -1,29 +1,26 @@
 [tool.poetry]
 name = "unicorn-fy"
 version = "0.14.2"
-description = "A Python SDK by LUCIT to convert received raw data from crypto exchange API endpoints into well-formed python dictionaries."
+description = "A Python SDK to convert received raw data from crypto exchange API endpoints into well-formed python dictionaries."
 authors = ["LUCIT Systems and Development <info@lucit.tech>"]
-license = "LSOSL - LUCIT Synergetic Open Source License"
+license = "MIT"
 readme = "README.md"
-homepage = "https://github.com/LUCIT-Systems-and-Development/unicorn-fy"
-documentation = "https://unicorn-fy.docs.lucit.tech"
-repository = "https://github.com/LUCIT-Systems-and-Development/unicorn-fy"
+homepage = "https://github.com/oliver-zehentleitner/unicorn-fy"
+documentation = "https://oliver-zehentleitner.github.io/unicorn-fy"
+repository = "https://github.com/oliver-zehentleitner/unicorn-fy"
 
 [tool.poetry.urls]
-'Howto' = 'https://www.lucit.tech/unicorn-fy.html'
-'Documentation' = 'https://unicorn-fy.docs.lucit.tech'
-'Wiki' = 'https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki'
-'Author' = 'https://www.lucit.tech'
-'Changes' = 'https://unicorn-fy.docs.lucit.tech/changelog.html'
-'License' = 'https://unicorn-fy.docs.lucit.tech/license.html'
-'Issue Tracker' = 'https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues'
+'Howto' = 'https://github.com/oliver-zehentleitner/unicorn-fy'
+'Documentation' = 'https://oliver-zehentleitner.github.io/unicorn-fy'
+'Wiki' = 'https://github.com/oliver-zehentleitner/unicorn-fy/wiki'
+'Author' = 'https://www.linkedin.com/in/oliver-zehentleitner'
+'Changes' = 'https://oliver-zehentleitner.github.io/unicorn-fy/changelog.html'
+'License' = 'https://oliver-zehentleitner.github.io/unicorn-fy/license.html'
+'Issue Tracker' = 'https://github.com/oliver-zehentleitner/unicorn-fy/issues'
 'Telegram' = 'https://t.me/unicorndevs'
-'Chat' = 'https://app.gitter.im/#/room/#unicorn-fy:gitter.im'
-'Get Support' = 'https://www.lucit.tech/get-support.html'
-'LUCIT Online Shop' = 'https://shop.lucit.services/software/unicorn-binance-suite'
 
 [tool.poetry.dependencies]
-python = ">=3.7.0"
+python = ">=3.8.0"
 Cython = "*"
 requests = "*"
 simplejson = "*"

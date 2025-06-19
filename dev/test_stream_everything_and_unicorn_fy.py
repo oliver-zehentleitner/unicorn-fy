@@ -4,18 +4,17 @@
 # File: dev/test_stream_everything_and_unicorn_fy.py
 #
 # Part of ‘UnicornFy’
-# Project website: https://www.lucit.tech/unicorn-fy.html
-# Github: https://github.com/LUCIT-Systems-and-Development/unicorn-fy
-# Documentation: https://unicorn-fy.docs.lucit.tech/
+# Project website: https://github.com/oliver-zehentleitner/unicorn-fy
+# Github: https://github.com/oliver-zehentleitner/unicorn-fy
+# Documentation: https://oliver-zehentleitner.github.io/unicorn-fy
 # PyPI: https://pypi.org/project/unicorn-fy
-# LUCIT Online Shop: https://shop.lucit.services/software
 #
-# License: LSOSL - LUCIT Synergetic Open Source License
-# https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/LICENSE
+# License: MIT
+# https://github.com/oliver-zehentleitner/unicorn-fy/blob/master/LICENSE
 #
-# Author: LUCIT Systems and Development
+# Author: Oliver Zehentleitner
 #
-# Copyright (c) 2019-2023, LUCIT Systems and Development (https://www.lucit.tech)
+# Copyright (c) 2019-2025, Oliver Zehentleitner (https://www.linkedin.com/in/oliver-zehentleitner/)
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
@@ -79,7 +78,7 @@ markets = []
 
 try:
     # To use this library you need a valid UNICORN Binance Suite License:
-    # https://medium.lucit.tech/-87b0088124a8
+    # https://technopathy.club/-87b0088124a8
     ubra = BinanceRestApiManager(binance_api_key, binance_api_secret)
     ubwa = BinanceWebSocketApiManager()
 except requests.exceptions.ConnectionError:

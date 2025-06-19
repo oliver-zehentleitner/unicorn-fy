@@ -5,9 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to 
 [Semantic Versioning](http://semver.org/).
 
-[Discussions about unicorn-fy releases!](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/discussions/categories/releases)
+[Discussions about unicorn-fy releases!](https://github.com/oliver-zehentleitner/unicorn-fy/discussions/categories/releases)
 
-[How to upgrade to the latest version!](https://unicorn-fy.docs.lucit.tech/readme.html#installation-and-upgrade)
+[How to upgrade to the latest version!](https://oliver-zehentleitner.github.io/unicorn-fyreadme.html#installation-and-upgrade)
 
 ## 0.14.2.dev (development stage/unreleased/unstable)
 ### Added
@@ -32,8 +32,8 @@ special, please note that this process takes some time!
 ## 0.14.0
 ### Added
 - Wheels for arm64 (Raspberry Pi)
-- PR "futures account update: handle multi_assets_mode update" https://github.com/LUCIT-Systems-and-Development/unicorn-fy/pull/38
-- PR "Updated All Futures Market Streams, Implemented Proper Coin-Futures Handling" https://github.com/LUCIT-Systems-and-Development/unicorn-fy/pull/39  
+- PR "futures account update: handle multi_assets_mode update" https://github.com/oliver-zehentleitner/unicorn-fy/pull/38
+- PR "Updated All Futures Market Streams, Implemented Proper Coin-Futures Handling" https://github.com/oliver-zehentleitner/unicorn-fy/pull/39
 
 ## 0.13.1
 - Building conda packages and distribute them via https://anaconda.org/lucit
@@ -63,22 +63,22 @@ Codebase equal to 0.12.0, just preparing conda-forge packaging
 ## 0.11.0
 ### Adding 
 - Implement missing ACCOUNT_UPDATE (binance futures) event (Thx @folktale42
-[PR#28](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/pull/28))
+[PR#28](https://github.com/oliver-zehentleitner/unicorn-fy/pull/28))
 - Support for Perpetual Coin Futures `binance_com_coin_futures_websocket()` - NOT READY!!!)
 
 ## 0.10.0
 ### Added
 - Support for `ORDER_TRADE_UPDATE`, `ACCOUNT_CONFIG_UPDATE`, `MARGIN_CALL`
  and `ACCOUNT_UPDATE` in `binance_futures_websocket()` (Thx @StarBalll
-[PR#23](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/pull/23) and 
-[PR#25](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/pull/25)
+[PR#23](https://github.com/oliver-zehentleitner/unicorn-fy/pull/23) and
+[PR#25](https://github.com/oliver-zehentleitner/unicorn-fy/pull/25)
 - unittests for `ORDER_TRADE_UPDATE`, `ACCOUNT_CONFIG_UPDATE`
  and `ACCOUNT_UPDATE` in `binance_futures_websocket()`
 
 ## 0.9.0
 ### Added
 - Support for `balanceUpdate` in `binance_websocket()` and `binance_futures_websocket()`
-[PR#19 thx @davivc](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/pull/21)
+[PR#19 thx @davivc](https://github.com/oliver-zehentleitner/unicorn-fy/pull/21)
 
 ## 0.8.0
 ### Added
@@ -87,7 +87,7 @@ Codebase equal to 0.12.0, just preparing conda-forge packaging
 ## 0.7.0
 ### Added
 - Support for `listStatus` in `binance_websocket()` 
-[issue#19](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues/19)
+[issue#19](https://github.com/oliver-zehentleitner/unicorn-fy/issues/19)
 
 ## 0.6.0
 ### Added
@@ -97,13 +97,13 @@ Codebase equal to 0.12.0, just preparing conda-forge packaging
 
 ## 0.5.0
 ### Added
-- `outboundAccountPosition` [issue#11](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues/11) - thanks to 
+- `outboundAccountPosition` [issue#11](https://github.com/oliver-zehentleitner/unicorn-fy/issues/11) - thanks to
 @bmschwartz
 - handling for results
 ### Fixed
 - `ModuleNotFoundError: No module named 'unicorn_fy.unicorn_fy'; 'unicorn_fy' is not a package` 
-[PR#10](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/pull/10), 
-[issue#9](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues/9)
+[PR#10](https://github.com/oliver-zehentleitner/unicorn-fy/pull/10),
+[issue#9](https://github.com/oliver-zehentleitner/unicorn-fy/issues/9)
 - thanks to @uggel
 
 ## 0.4.1
@@ -136,7 +136,7 @@ Codebase equal to 0.12.0, just preparing conda-forge packaging
 - exception handling
 ### Added
 - binance.com-futures (copy of binance_websocket() with suggested modification of 
-[issue #1](https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues/1))
+[issue #1](https://github.com/oliver-zehentleitner/unicorn-fy/issues/1))
 
 ## 0.3.1
 ### Changes

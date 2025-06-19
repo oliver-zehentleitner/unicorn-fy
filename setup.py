@@ -4,18 +4,17 @@
 # File: setup.py
 #
 # Part of ‘UnicornFy’
-# Project website: https://www.lucit.tech/unicorn-fy.html
-# Github: https://github.com/LUCIT-Systems-and-Development/unicorn-fy
-# Documentation: https://unicorn-fy.docs.lucit.tech/
+# Project website: https://github.com/oliver-zehentleitner/unicorn-fy
+# Github: https://github.com/oliver-zehentleitner/unicorn-fy
+# Documentation: https://oliver-zehentleitner.github.io/unicorn-fy
 # PyPI: https://pypi.org/project/unicorn-fy
-# LUCIT Online Shop: https://shop.lucit.services/software
 #
-# License: LSOSL - LUCIT Synergetic Open Source License
-# https://github.com/LUCIT-Systems-and-Development/unicorn-fy/blob/master/LICENSE
+# License: MIT
+# https://github.com/oliver-zehentleitner/unicorn-fy/blob/master/LICENSE
 #
-# Author: LUCIT Systems and Development
+# Author: Oliver Zehentleitner
 #
-# Copyright (c) 2019-2023, LUCIT Systems and Development (https://www.lucit.tech)
+# Copyright (c) 2019-2025, Oliver Zehentleitner (https://www.linkedin.com/in/oliver-zehentleitner/)
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
@@ -76,40 +75,37 @@ with open("README.md", "r") as fh:
 setup(
      name=name,
      version="0.14.2",
-     author="LUCIT Systems and Development",
-     author_email='info@lucit.tech',
-     url="https://github.com/LUCIT-Systems-and-Development/unicorn-fy",
-     description="A Python SDK by LUCIT to convert received raw data from crypto exchange API endpoints into "
+     author="Oliver Zehentleitner",
+     url="https://github.com/oliver-zehentleitner/unicorn-fy",
+     description="A Python SDK to convert received raw data from crypto exchange API endpoints into "
                  "well-formed python dictionaries.",
      long_description=long_description,
      long_description_content_type="text/markdown",
-     license='LSOSL - LUCIT Synergetic Open Source License',
+     license='MIT',
      install_requires=['ujson', 'requests', 'Cython'],
      keywords='binance, api, exchange, unicornfy, binance-dex, binance-chain, rest-api, websockets',
      project_urls={
-         'Documentation': 'https://unicorn-fy.docs.lucit.tech',
-         'Wiki': 'https://github.com/LUCIT-Systems-and-Development/unicorn-fy/wiki',
-         'Author': 'https://www.lucit.tech',
-         'Changes': 'https://unicorn-fy.docs.lucit.tech/changelog.html',
-         'License': 'https://unicorn-fy.docs.lucit.tech/license.html',
-         'Issue Tracker': 'https://github.com/LUCIT-Systems-and-Development/unicorn-fy/issues',
-         'Chat': 'https://gitter.im/unicorn-binance-suite/unicorn-fy',
-         'Telegram': 'https://t.me/unicorndevs', 
-         'Get Support': 'https://www.lucit.tech/get-support.html',
+         'Documentation': 'https://oliver-zehentleitner.github.io/unicorn-fy',
+         'Wiki': 'https://github.com/oliver-zehentleitner/unicorn-fy/wiki',
+         'Author': 'https://www.linkedin.com/in/oliver-zehentleitner',
+         'Changes': 'https://oliver-zehentleitner.github.io/unicorn-fy/changelog.html',
+         'License': 'https://oliver-zehentleitner.github.io/unicorn-fy/license.html',
+         'Issue Tracker': 'https://github.com/oliver-zehentleitner/unicorn-fy/issues',
+         'Telegram': 'https://t.me/unicorndevs',
      },
      packages=find_packages(exclude=[f"dev/{source_dir}"], include=[source_dir]),
      ext_modules=cythonize(extensions, compiler_directives={'language_level': "3"}),
-     python_requires='>=3.7.0',
+     python_requires='>=3.8.0',
      package_data={'': ['*.so', '*.dll', '*.py', '*.pyd', '*.pyi']},
      include_package_data=True,
      classifiers=[
          "Development Status :: 5 - Production/Stable",
-         "Programming Language :: Python :: 3.7",
          "Programming Language :: Python :: 3.8",
          "Programming Language :: Python :: 3.9",
          "Programming Language :: Python :: 3.10",
          "Programming Language :: Python :: 3.11",
          "Programming Language :: Python :: 3.12",
+         "Programming Language :: Python :: 3.13",
          "License :: OSI Approved :: MIT License",
          'Intended Audience :: Developers',
          "Intended Audience :: Financial and Insurance Industry",

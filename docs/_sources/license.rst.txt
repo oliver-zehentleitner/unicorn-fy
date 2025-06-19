@@ -1,7 +1,7 @@
 MIT License
 ===========
 
-Copyright (c) 2019-2023 LUCIT Systems and Development, Am Berg 391, 3970 Weitra (https://www.lucit.tech)
+Copyright (c) 2019-2025 LUCIT Systems and Development, Am Berg 391, 3970 Weitra (https://www.lucit.tech)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
