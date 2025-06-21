@@ -33,20 +33,6 @@ jobs:
           conda create -y -n buildenv python=${{ matrix.python-version }} pip
           conda config --set solver classic
 
-      - name: Set CONDA_SUBDIR for cross-platform
-        shell: bash
-        run: |
-          if [[ "${{ runner.os }}" == "Linux" ]]; then
-            echo "CONDA_SUBDIR=linux-64" >> $GITHUB_ENV
-            export CONDA_SUBDIR=linux-64
-          elif [[ "${{ runner.os }}" == "macOS" ]]; then
-            echo "CONDA_SUBDIR=osx-64" >> $GITHUB_ENV
-            export CONDA_SUBDIR=osx-64
-          elif [[ "${{ runner.os }}" == "Windows" ]]; then
-            echo "CONDA_SUBDIR=win-64" >> $GITHUB_ENV
-            export CONDA_SUBDIR=win-64
-          fi
-
       - name: Show Conda Info
         run: |
           conda info
@@ -56,7 +42,6 @@ jobs:
       - name: Build with conda-build
         shell: bash -l {0}
         run: |
-          export CONDA_SUBDIR=$CONDA_SUBDIR
           conda activate buildenv
           pip install Cython requests ujson setuptools wheel
           conda install -c conda-forge conda-build conda-verify anaconda-client
