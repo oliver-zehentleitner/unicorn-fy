@@ -14,7 +14,8 @@
 #
 # Author: Oliver Zehentleitner
 #
-# Copyright (c) 2019-2025, Oliver Zehentleitner (https://www.linkedin.com/in/oliver-zehentleitner/)
+# Copyright (c) 2019-2025, Oliver Zehentleitner (https://about.me/oliver-zehentleitner)
+#
 # All rights reserved.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a
