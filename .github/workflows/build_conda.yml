@@ -33,6 +33,9 @@ jobs:
           conda create -y -n buildenv python=${{ matrix.python-version }} pip
           conda config --set solver classic
 
+      - name: Set CONDA_SUBDIR to match target platform
+        run: echo "CONDA_SUBDIR=linux-64" >> $GITHUB_ENV
+
       - name: Build with conda-build
         shell: bash -l {0}
         run: |
