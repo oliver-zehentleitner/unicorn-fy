@@ -49,6 +49,8 @@ jobs:
       - name: Build with conda-build
         shell: bash -l {0}
         run: |
+          unset CONDA_SUBDIR
+          source "$(conda info --base)/etc/profile.d/conda.sh"
           conda activate buildenv
           pip install Cython requests ujson setuptools wheel
           conda install -c conda-forge conda-build conda-verify anaconda-client
