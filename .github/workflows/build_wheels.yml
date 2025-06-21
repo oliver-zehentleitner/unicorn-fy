@@ -56,6 +56,13 @@ jobs:
         with:
           path: dist
 
+      - name: Move all artifacts into dist_upload/
+        run: |
+          rm -rf dist_upload
+          mkdir -p dist_upload
+          find dist -name '*.whl' -exec cp {} dist_upload/ \;
+          find dist -name '*.tar.gz' -exec cp {} dist_upload/ \;
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
@@ -64,8 +71,8 @@ jobs:
           discussion_category_name: releases
           draft: false
           files: |
-            dist/*.tar.gz
-            dist/*.whl
+            dist_upload/*.tar.gz
+            dist_upload/*.whl
           generate_release_notes: true
           name: unicorn-fy
           prerelease: false
@@ -74,3 +81,5 @@ jobs:
 
       - name: Create PyPi Release
         uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: dist_upload
