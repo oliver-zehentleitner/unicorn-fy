@@ -45,6 +45,7 @@ jobs:
       - name: Install dependencies
         shell: bash
         run: |
+          OS_NAME="$(uname)"
           if [[ "$OS_NAME" == "MINGW"* || "$OS_NAME" == "MSYS"* || "$OS_NAME" == "CYGWIN"* ]]; then
             echo "Detected Windows via bash. Using conda.bat to activate env."
             source "C:/Miniconda3/etc/profile.d/conda.sh"
@@ -60,6 +61,7 @@ jobs:
       - name: Debug environment and config
         shell: bash
         run: |
+          OS_NAME="$(uname)"
           if [[ "$OS_NAME" == "MINGW"* || "$OS_NAME" == "MSYS"* || "$OS_NAME" == "CYGWIN"* ]]; then
             echo "Detected Windows via bash. Using conda.bat to activate env."
             source "C:/Miniconda3/etc/profile.d/conda.sh"
@@ -86,6 +88,7 @@ jobs:
       - name: Render meta.yaml
         shell: bash
         run: |
+          OS_NAME="$(uname)"
           if [[ "$OS_NAME" == "MINGW"* || "$OS_NAME" == "MSYS"* || "$OS_NAME" == "CYGWIN"* ]]; then
             echo "Detected Windows via bash. Using conda.bat to activate env."
             source "C:/Miniconda3/etc/profile.d/conda.sh"
@@ -100,6 +103,7 @@ jobs:
       - name: Build with conda-build
         shell: bash
         run: |
+          OS_NAME="$(uname)"
           if [[ "$OS_NAME" == "MINGW"* || "$OS_NAME" == "MSYS"* || "$OS_NAME" == "CYGWIN"* ]]; then
             echo "Detected Windows via bash. Using conda.bat to activate env."
             source "C:/Miniconda3/etc/profile.d/conda.sh"
