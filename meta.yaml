@@ -17,6 +17,8 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - python >=3.8,<3.13
+    - pip
     - mypy
   host:
     - pip
@@ -331,7 +333,7 @@ about:
   dev_url: https://github.com/oliver-zehentleitner/unicorn-fy
   doc_url: https://oliver-zehentleitner.github.io/unicorn-fy
   home: https://github.com/oliver-zehentleitner/unicorn-fy
-  license: LSOSL
+  license: MIT
   license_file: LICENSE
 
 extra:
