@@ -155,6 +155,7 @@ this may take some time!
 
 ### A Conda Package of the latest version with `conda` from [Anaconda](https://anaconda.org/lucit)
 [There is no conda support until the migration to conda-forge.](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
+
 The `unicorn-fy` package is also available as a Cython version for the `linux-64`, `osx-64` 
 and `win-64` architectures with [Conda](https://docs.conda.io/en/latest/) through the 
 [`lucit` channel](https://anaconda.org/lucit). 
@@ -164,6 +165,7 @@ For optimal compatibility and performance, it is recommended to source the neces
 
 #### Installation
 [There is no conda support until the migration to conda-forge.](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
+
 ```
 conda config --add channels conda-forge
 conda config --add channels lucit
@@ -172,6 +174,7 @@ conda install -c lucit unicorn-fy
 
 #### Update
 [There is no conda support until the migration to conda-forge.](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
+
 `conda update -c lucit unicorn-fy`
 
 ### From source of the latest release with PIP from [GitHub](https://github.com/oliver-zehentleitner/unicorn-fy)
