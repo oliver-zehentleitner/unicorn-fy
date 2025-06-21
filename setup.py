@@ -74,7 +74,7 @@ with open("README.md", "r") as fh:
 
 setup(
      name=name,
-     version="0.14.3",
+     version="0.15.0",
      author="Oliver Zehentleitner",
      url="https://github.com/oliver-zehentleitner/unicorn-fy",
      description="A Python SDK to convert received raw data from crypto exchange API endpoints into "

@@ -76,7 +76,7 @@ jobs:
           generate_release_notes: true
           name: unicorn-fy
           prerelease: false
-          tag_name: 0.14.3
+          tag_name: 0.15.0
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create PyPi Release
