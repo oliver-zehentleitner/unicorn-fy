@@ -1,4 +1,4 @@
-[![GitHub Release](https://img.shields.io/github/release/oliver-zehentleitner/unicorn-fy.svg?label=github)](https://github.com/oliver-zehentleitner/unicorn-fy/releases)
+[![GitHub Release](https://img.shields.io/github/release/oliver-zehentleitner/unicorn-fy.svg?label=github&color=blue)](https://github.com/oliver-zehentleitner/unicorn-fy/releases)
 [![GitHub Downloads](https://img.shields.io/github/downloads/oliver-zehentleitner/unicorn-fy/total?color=blue)](https://github.com/oliver-zehentleitner/unicorn-fy/releases)
 ![Anaconda Release](https://img.shields.io/conda/v/lucit/unicorn-fy?color=blue)
 ![Anaconda Downloads](https://img.shields.io/conda/dn/lucit/unicorn-fy?color=blue)

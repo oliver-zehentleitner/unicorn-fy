@@ -41,18 +41,18 @@ jobs:
           conda install -c conda-forge conda-build conda-verify anaconda-client
           conda build .
 
-      - name: Install Conda Tools
-        run: |
-          conda install -c conda-forge conda-build
-          conda install conda-verify
-          conda install -c anaconda anaconda-client
+#      - name: Install Conda Tools
+#        run: |
+#          conda install -c conda-forge conda-build
+#          conda install conda-verify
+#          conda install -c anaconda anaconda-client
 
-      - name: Configure PATH
-        run: echo "$CONDA/bin" >> $GITHUB_PATH
+#      - name: Configure PATH
+#        run: echo "$CONDA/bin" >> $GITHUB_PATH
 
-      - name: Install Python Tools
-        run: |
-          pip install setuptools wheel --upgrade       
+#      - name: Install Python Tools
+#        run: |
+#          pip install setuptools wheel --upgrade
 
       - name: Install macOS SDK (only on macOS)
         if: runner.os == 'macOS'
