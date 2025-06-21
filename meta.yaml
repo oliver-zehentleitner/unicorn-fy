@@ -20,13 +20,6 @@ requirements:
     - python >=3.8,<3.13
     - pip
     - mypy
-  host:
-    - pip
-    - python >=3.8,<3.13
-    - mypy
-    - cython
-    - requests
-    - ujson
   run:
     - pip
     - python >=3.8,<3.13
