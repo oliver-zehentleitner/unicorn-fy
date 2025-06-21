@@ -36,7 +36,9 @@ jobs:
 
       - name: Set conda subdir for Linux
         if: runner.os == 'Linux'
+        shell: bash
         run: |
+          source "$(conda info --base)/etc/profile.d/conda.sh"
           conda activate buildenv
           conda config --env --set subdir linux-64
 
