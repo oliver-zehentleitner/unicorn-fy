@@ -27,10 +27,10 @@ requirements:
     - requests
     - ujson
 
-channels:
-  - lucit
-  - conda-forge
-  - default
+#channels:
+#  - lucit
+#  - conda-forge
+#  - default
 
 test:
   imports:
@@ -42,11 +42,10 @@ test:
 
 about:
   summary: | 
-    A Python SDK to convert received raw data from crypto exchange API endpoints into well-formed python 
-    dictionaries.
+    A Python SDK to convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
   description: |
-    [![GitHub Release](https://img.shields.io/github/release/LUCIT-Systems-and-Development/unicorn-fy.svg?label=github)](https://github.com/oliver-zehentleitner/unicorn-fy/releases)
-    [![GitHub Downloads](https://img.shields.io/github/downloads/LUCIT-Systems-and-Development/unicorn-fy/total?color=blue)](https://github.com/oliver-zehentleitner/unicorn-fy/releases)
+    [![GitHub Release](https://img.shields.io/github/release/oliver-zehentleitner/unicorn-fy.svg?label=github&color=blue)](https://github.com/oliver-zehentleitner/unicorn-fy/releases)
+    [![GitHub Downloads](https://img.shields.io/github/downloads/oliver-zehentleitner/unicorn-fy/total?color=blue)](https://github.com/oliver-zehentleitner/unicorn-fy/releases)
     ![Anaconda Release](https://img.shields.io/conda/v/lucit/unicorn-fy?color=blue)
     ![Anaconda Downloads](https://img.shields.io/conda/dn/lucit/unicorn-fy?color=blue)
     [![PyPi Release](https://img.shields.io/pypi/v/unicorn-fy?color=blue)](https://pypi.org/project/unicorn-fy/)
