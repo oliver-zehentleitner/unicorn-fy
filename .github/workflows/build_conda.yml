@@ -33,14 +33,19 @@ jobs:
           conda create -y -n buildenv python=${{ matrix.python-version }} pip
           conda config --set solver classic
 
-      - name: Set platform-specific CONDA_SUBDIR
+      - name: Set CONDA_SUBDIR for cross-platform
         shell: bash
         run: |
-          case "${{ runner.os }}" in
-            Linux)  echo "CONDA_SUBDIR=linux-64"  >> $GITHUB_ENV ;;
-            macOS)  echo "CONDA_SUBDIR=osx-64"    >> $GITHUB_ENV ;;
-            Windows) echo "CONDA_SUBDIR=win-64"   >> $GITHUB_ENV ;;
-          esac
+          if [[ "${{ runner.os }}" == "Linux" ]]; then
+            echo "CONDA_SUBDIR=linux-64" >> $GITHUB_ENV
+            export CONDA_SUBDIR=linux-64
+          elif [[ "${{ runner.os }}" == "macOS" ]]; then
+            echo "CONDA_SUBDIR=osx-64" >> $GITHUB_ENV
+            export CONDA_SUBDIR=osx-64
+          elif [[ "${{ runner.os }}" == "Windows" ]]; then
+            echo "CONDA_SUBDIR=win-64" >> $GITHUB_ENV
+            export CONDA_SUBDIR=win-64
+          fi
 
       - name: Show Conda Info
         run: |
