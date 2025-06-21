@@ -28,11 +28,14 @@ jobs:
           auto-activate-base: true
           show-channel-urls: true
 
-      - name: Setup Conda Env and Build
+      - name: Create Conda Env
         run: |
           conda create -y -n buildenv python=${{ matrix.python-version }} pip
           conda config --set solver classic
-          . "$CONDA/etc/profile.d/conda.sh"
+
+      - name: Build with conda-build
+        shell: bash -l {0}
+        run: |
           conda activate buildenv
           pip install Cython requests ujson setuptools wheel
           conda install -c conda-forge conda-build conda-verify anaconda-client
