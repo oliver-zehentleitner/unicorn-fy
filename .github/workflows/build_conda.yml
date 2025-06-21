@@ -47,6 +47,7 @@ jobs:
           conda list
 
       - name: Build with conda-build
+        shell: bash
         run: |
           unset CONDA_SUBDIR
           source "$(conda info --base)/etc/profile.d/conda.sh"
