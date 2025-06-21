@@ -62,7 +62,8 @@ jobs:
       
           pip install Cython requests ujson setuptools wheel
           conda install -c conda-forge conda-build conda-verify anaconda-client
-          conda build --override-channels -c conda-forge -c defaults --no-test --no-anaconda-upload --keep-old-work .
+          conda build --override-channels -c defaults -c conda-forge \
+            --no-test --no-anaconda-upload --keep-old-work .
 
       - name: Install macOS SDK (only on macOS)
         if: runner.os == 'macOS'
