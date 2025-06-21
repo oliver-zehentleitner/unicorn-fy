@@ -66,14 +66,14 @@ jobs:
           echo "### ENV Vars" && env | sort
           echo "### Build dir" && ls -la $CONDA_PREFIX/conda-bld || true
           echo "### Work dir" && ls -la $CONDA_PREFIX/conda-bld/work || true
-          echo "### Expected output" && conda build . --output --no-variant || true
+          echo "### Expected output" && conda build . --output || true
 
       - name: Build with conda-build
         shell: bash
         run: |
           source "$(conda info --base)/etc/profile.d/conda.sh"
           conda activate buildenv
-          conda build . --no-variant -c conda-forge -c defaults --no-verify --no-test --no-anaconda-upload --keep-old-work
+          conda build . -c conda-forge -c defaults --no-verify --no-test --no-anaconda-upload --keep-old-work
 
       - name: Install macOS SDK (only on macOS)
         if: runner.os == 'macOS'
