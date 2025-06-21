@@ -77,8 +77,10 @@ jobs:
           cat conda_build_config.yaml || echo "conda_build_config.yaml not found!"
           echo "===== DEBUG: meta.yaml ====="
           cat meta.yaml || echo "meta.yaml not found!"
+          echo "===== DEBUG: Conda config sources ====="
+          conda config --show-sources
 
-          conda build -c conda-forge -c defaults --no-verify --no-test --no-anaconda-upload --keep-old-work .
+          conda build -c conda-forge -c defaults --no-verify --no-test --no-anaconda-upload --keep-old-work --variant-config-files conda_build_config.yaml .
 
       - name: Install macOS SDK (only on macOS)
         if: runner.os == 'macOS'
