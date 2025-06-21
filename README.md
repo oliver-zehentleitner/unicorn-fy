@@ -206,7 +206,7 @@ or the [current master branch](https://github.com/oliver-zehentleitner/unicorn-f
 - ./setup.py
 
 ## Change Log
-[https://oliver-zehentleitner.github.io/unicorn-fy/changelog.html](https://oliver-zehentleitner.github.io/unicorn-fychangelog.html)
+[https://oliver-zehentleitner.github.io/unicorn-fy/changelog.html](https://oliver-zehentleitner.github.io/unicorn-fy/changelog.html)
 
 ## Documentation
 - [General](https://oliver-zehentleitner.github.io/unicorn-fy)
