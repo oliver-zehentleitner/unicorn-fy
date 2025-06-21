@@ -39,10 +39,6 @@ channels:
   - conda-forge
   - default
 
-dependencies:
-  - anaconda-client
-  - conda-build
-
 test:
   imports:
     - unicorn_fy
