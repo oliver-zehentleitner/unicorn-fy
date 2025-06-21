@@ -51,8 +51,11 @@ jobs:
       - name: Build with conda-build
         shell: bash
         run: |
-          unset CONDA_SUBDIR
-          source "$(conda info --base)/etc/profile.d/conda.sh"
+          if [[ "$RUNNER_OS" == "Windows" ]]; then
+            eval "$(C:/Miniconda3/Scripts/conda.exe shell.bash hook)"
+          else
+            source "$(conda info --base)/etc/profile.d/conda.sh"
+          fi
           conda activate buildenv
           pip install Cython requests ujson setuptools wheel
           conda install -c conda-forge conda-build conda-verify anaconda-client
