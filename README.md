@@ -1,7 +1,5 @@
 [![GitHub Release](https://img.shields.io/github/release/oliver-zehentleitner/unicorn-fy.svg?label=github&color=blue)](https://github.com/oliver-zehentleitner/unicorn-fy/releases)
 [![GitHub Downloads](https://img.shields.io/github/downloads/oliver-zehentleitner/unicorn-fy/total?color=blue)](https://github.com/oliver-zehentleitner/unicorn-fy/releases)
-![Anaconda Release](https://img.shields.io/conda/v/lucit/unicorn-fy?color=blue)
-![Anaconda Downloads](https://img.shields.io/conda/dn/lucit/unicorn-fy?color=blue)
 [![PyPi Release](https://img.shields.io/pypi/v/unicorn-fy?color=blue)](https://pypi.org/project/unicorn-fy/)
 [![PyPi Downloads](https://pepy.tech/badge/unicorn-fy)](https://pepy.tech/project/unicorn-fy)
 [![License](https://img.shields.io/github/license/oliver-zehentleitner/unicorn-fy.svg?color=blue)](https://oliver-zehentleitner.github.io/unicorn-fylicense.html)
@@ -109,7 +107,7 @@ If you like the project, please
 ## Installation and Upgrade
 The module requires Python 3.8 and runs smoothly up to and including Python 3.13.
 
-Anaconda packages are available from Python version 3.8 and higher, but only in the latest version!
+[There is no conda support until the migration to conda-forge.](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
 
 For the PyPy interpreter we offer packages only from Python version 3.9 and higher.
 
@@ -121,7 +119,7 @@ If you run into errors during the installation take a look [here](https://github
 ### Packages are created automatically with GitHub Actions
 When a new release is to be created, we start two GitHubActions: 
 
-- [Build and Publish Anaconda](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/build_conda.yml)
+- [Build and Publish Anaconda](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
 - [Build and Publish GH+PyPi](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/build_wheels.yml) 
 
 Both start virtual Windows/Linux/Mac servers provided by GitHub in the cloud with preconfigured environments and 
@@ -157,6 +155,7 @@ this may take some time!
 `pip install unicorn-fy --upgrade`
 
 ### A Conda Package of the latest version with `conda` from [Anaconda](https://anaconda.org/lucit)
+[There is no conda support until the migration to conda-forge.](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
 The `unicorn-fy` package is also available as a Cython version for the `linux-64`, `osx-64` 
 and `win-64` architectures with [Conda](https://docs.conda.io/en/latest/) through the 
 [`lucit` channel](https://anaconda.org/lucit). 
@@ -165,6 +164,7 @@ For optimal compatibility and performance, it is recommended to source the neces
 [`conda-forge` channel](https://anaconda.org/conda-forge). 
 
 #### Installation
+[There is no conda support until the migration to conda-forge.](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
 ```
 conda config --add channels conda-forge
 conda config --add channels lucit
@@ -172,6 +172,7 @@ conda install -c lucit unicorn-fy
 ```
 
 #### Update
+[There is no conda support until the migration to conda-forge.](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
 `conda update -c lucit unicorn-fy`
 
 ### From source of the latest release with PIP from [GitHub](https://github.com/oliver-zehentleitner/unicorn-fy)
