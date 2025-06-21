@@ -12,15 +12,13 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        os: [ubuntu-24.04, windows-2022, macos-14]  # Windows-2025 nicht verfügbar, fallback auf 2022
+        os: [ubuntu-24.04, windows-2022, macos-14]
         python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
-        exclude:
-          - python-version: "3.13"
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Conda environment setup
+      - name: Conda environment creation and activation
         uses: conda-incubator/setup-miniconda@v2
         with:
           python-version: ${{ matrix.python-version }}
@@ -34,7 +32,8 @@ jobs:
           conda create -y -n buildenv python=${{ matrix.python-version }} pip
           conda config --set solver classic
 
-      - name: Install dependencies
+      - name: Install dependencies (Linux/macOS)
+        if: runner.os != 'Windows'
         shell: bash
         run: |
           source "$(conda info --base)/etc/profile.d/conda.sh"
@@ -42,37 +41,67 @@ jobs:
           pip install Cython requests ujson setuptools wheel
           conda install -y -c conda-forge conda-build conda-verify anaconda-client
 
+      - name: Install dependencies (Windows)
+        if: runner.os == 'Windows'
+        shell: cmd
+        run: |
+          call C:\Miniconda3\Scripts\activate.bat buildenv
+          pip install Cython requests ujson setuptools wheel
+          conda install -y -c conda-forge conda-build conda-verify anaconda-client
+
       - name: Debug environment and config
         shell: bash
+        if: runner.os != 'Windows'
         run: |
           source "$(conda info --base)/etc/profile.d/conda.sh"
           conda activate buildenv
-          echo "### Conda info" && conda info
-          echo "### Conda config" && conda config --show
-          echo "### Conda list" && conda list
-          echo "### PWD & LS" && pwd && ls -la
-          echo "### meta.yaml" && cat meta.yaml || echo "Missing!"
+          conda info
+          conda config --show
+          conda list
+          pwd && ls -la
+          echo "### meta.yaml"
+          cat meta.yaml || echo "Missing!"
+
+      - name: Debug environment and config (Windows)
+        shell: cmd
+        if: runner.os == 'Windows'
+        run: |
+          call C:\Miniconda3\Scripts\activate.bat buildenv
+          conda info
+          conda config --show
+          conda list
+          dir
 
       - name: Render meta.yaml
+        if: runner.os != 'Windows'
         shell: bash
         run: |
           source "$(conda info --base)/etc/profile.d/conda.sh"
           conda activate buildenv
-          echo "### Render meta.yaml"
-          conda render . --no-variant || true
-          echo "### Rendered output"
-          conda render . --output --no-variant || true
-          echo "### ENV PATH" && echo "$PATH"
-          echo "### ENV Vars" && env | sort
-          echo "### Build dir" && ls -la $CONDA_PREFIX/conda-bld || true
-          echo "### Work dir" && ls -la $CONDA_PREFIX/conda-bld/work || true
-          echo "### Expected output" && conda build . --output || true
+          conda render . || true
+          conda render . --output || true
+
+      - name: Render meta.yaml (Windows)
+        if: runner.os == 'Windows'
+        shell: cmd
+        run: |
+          call C:\Miniconda3\Scripts\activate.bat buildenv
+          conda render . || exit /b 0
+          conda render . --output || exit /b 0
 
       - name: Build with conda-build
+        if: runner.os != 'Windows'
         shell: bash
         run: |
           source "$(conda info --base)/etc/profile.d/conda.sh"
           conda activate buildenv
+          conda build . -c conda-forge -c defaults --no-verify --no-test --no-anaconda-upload --keep-old-work
+
+      - name: Build with conda-build (Windows)
+        if: runner.os == 'Windows'
+        shell: cmd
+        run: |
+          call C:\Miniconda3\Scripts\activate.bat buildenv
           conda build . -c conda-forge -c defaults --no-verify --no-test --no-anaconda-upload --keep-old-work
 
       - name: Install macOS SDK (only on macOS)
@@ -87,7 +116,7 @@ jobs:
         run: |
           echo "CONDA_BUILD_SYSROOT: /opt/MacOSX10.10.sdk # [osx]" > conda_build_config.yaml
 
-      - name: Upload built packages to Anaconda
+      - name: Build and upload the conda packages
         uses: uibcdf/action-build-and-upload-conda-packages@v1.2.0
         with:
           meta_yaml_dir: .
