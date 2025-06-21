@@ -34,6 +34,14 @@ jobs:
           conda create -y -n buildenv python=${{ matrix.python-version }} pip
           conda config --set solver classic
 
+      - name: Inject dummy virtual packages
+        run: |
+          echo "__glibc: [2.17]" > conda_build_config.yaml
+          echo "__linux: [1]" >> conda_build_config.yaml
+          echo "__unix: [1]" >> conda_build_config.yaml
+          echo "__conda: [1]" >> conda_build_config.yaml
+          echo "__archspec: [\"x86_64\"]" >> conda_build_config.yaml
+
       - name: Show Conda Info
         run: |
           conda info
@@ -66,7 +74,7 @@ jobs:
       - name: Set CONDA_BUILD_SYSROOT (only on macOS)
         if: runner.os == 'macOS'
         run: |
-          echo "CONDA_BUILD_SYSROOT: /opt/MacOSX10.10.sdk # [osx]" > conda_build_config.yaml
+          echo "CONDA_BUILD_SYSROOT: /opt/MacOSX10.10.sdk # [osx]" >> conda_build_config.yaml
 
       - name: Build and upload the conda packages
         uses: uibcdf/action-build-and-upload-conda-packages@v1.2.0
