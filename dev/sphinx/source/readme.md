@@ -69,7 +69,7 @@ logging.getLogger("unicorn_fy")
 ```
 
 ## What are the benefits of UnicornFy
-- Supported exchanges:
+### Supported exchanges:
 
 ***Websockets***
 
