@@ -1,2 +1,2 @@
 unicorn-binance-rest-api
-unicorn-binance-websocket-api
+unicorn-binance-websocket-api==2.10.0
