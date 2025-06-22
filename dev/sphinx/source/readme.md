@@ -1,39 +1,29 @@
-[![Get a UNICORN Binance Suite License](https://raw.githubusercontent.com/LUCIT-Systems-and-Development/unicorn-binance-suite/master/images/logo/LUCIT-UBS-License-Offer.png)](https://shop.lucit.services)
-
-[![GitHub Release](https://img.shields.io/github/release/LUCIT-Systems-and-Development/unicorn-fy.svg?label=github)](https://github.com/oliver-zehentleitner/unicorn-fy/releases)
-[![GitHub Downloads](https://img.shields.io/github/downloads/LUCIT-Systems-and-Development/unicorn-fy/total?color=blue)](https://github.com/oliver-zehentleitner/unicorn-fy/releases)
-![Anaconda Release](https://img.shields.io/conda/v/lucit/unicorn-fy?color=blue)
-![Anaconda Downloads](https://img.shields.io/conda/dn/lucit/unicorn-fy?color=blue)
+[![GitHub Release](https://img.shields.io/github/release/oliver-zehentleitner/unicorn-fy.svg?label=github&color=blue)](https://github.com/oliver-zehentleitner/unicorn-fy/releases)
+[![GitHub Downloads](https://img.shields.io/github/downloads/oliver-zehentleitner/unicorn-fy/total?color=blue)](https://github.com/oliver-zehentleitner/unicorn-fy/releases)
 [![PyPi Release](https://img.shields.io/pypi/v/unicorn-fy?color=blue)](https://pypi.org/project/unicorn-fy/)
 [![PyPi Downloads](https://pepy.tech/badge/unicorn-fy)](https://pepy.tech/project/unicorn-fy)
-[![License](https://img.shields.io/github/license/LUCIT-Systems-and-Development/unicorn-fy.svg?color=blue)](https://oliver-zehentleitner.github.io/unicorn-fylicense.html)
+[![License](https://img.shields.io/github/license/oliver-zehentleitner/unicorn-fy.svg?color=blue)](https://oliver-zehentleitner.github.io/unicorn-fylicense.html)
 [![Supported Python Version](https://img.shields.io/pypi/pyversions/unicorn_fy.svg)](https://www.python.org/downloads/)
 [![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg)](https://github.com/oliver-zehentleitner/unicorn-fy/issues)
-[![codecov](https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-fy/branch/master/graph/badge.svg?token=5I03AZ3F5S)](https://codecov.io/gh/LUCIT-Systems-and-Development/unicorn-fy)
+[![codecov](https://codecov.io/gh/oliver-zehentleitner/unicorn-fy/branch/master/graph/badge.svg?token=5I03AZ3F5S)](https://codecov.io/gh/oliver-zehentleitner/unicorn-fy)
 [![CodeQL](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/codeql-analysis.yml)
 [![Unit Tests](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/unit-tests.yml)
 [![Build and Publish GH+PyPi](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/build_wheels.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/build_wheels.yml)
-[![Build and Publish Anaconda](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/build_conda.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/build_conda.yml)
 [![Read the Docs](https://img.shields.io/badge/read-%20docs-yellow)](https://oliver-zehentleitner.github.io/unicorn-fy)
 [![Read How To`s](https://img.shields.io/badge/read-%20howto-yellow)](https://technopathy.club)
 [![Github](https://img.shields.io/badge/source-github-cbc2c8)](https://github.com/oliver-zehentleitner/unicorn-fy)
 [![Telegram](https://img.shields.io/badge/community-telegram-41ab8c)](https://t.me/unicorndevs)
-[![Gitter](https://img.shields.io/badge/community-gitter-41ab8c)](https://gitter.im/unicorn-binance-suite/unicorn-fy?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Get Free Professional Support](https://img.shields.io/badge/chat-lucit%20support-004166)](https://www.lucit.tech/get-support.html)
 
-[![LUCIT-UNICORNFY-Banner](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/logo/LUCIT-UNICORNFY-Banner-Readme.png)](https://github.com/oliver-zehentleitner/unicorn-fy)
+[![LUCIT-UNICORNFY-Banner](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-fy/master/images/logo/LUCIT-UNICORNFY-Banner-Readme.png)](https://github.com/oliver-zehentleitner/unicorn-fy)
 
 # UnicornFy
 [Supported Exchanges](#supported-exchanges) | [Installation](#installation-and-upgrade) | [Change Log](#change-log) | [Documentation](#documentation) | 
 [Examples](#examples) | [Wiki](#wiki) | [Social](#social) | [Notifications](#receive-notifications) | [Bugs](#how-to-report-bugs-or-suggest-improvements) 
-| [Contributing](#contributing) | [Disclaimer](#disclaimer) | [Commercial Support](#commercial-support)
+| [Contributing](#contributing) | [Disclaimer](#disclaimer) 
 
-A Python SDK by [LUCIT](https://www.lucit.tech) to convert received raw data from crypto exchange API endpoints 
-into well-formed python dictionaries.
+A Python SDK to convert received raw data from crypto exchange API endpoints into well-formed python dictionaries.
 
 Part of ['UNICORN Binance Suite'](https://github.com/oliver-zehentleitner/unicorn-binance-suite).
-
-[Get help](https://www.lucit.tech/get-support.html) with the integration of the `UNICORN Binance Suite` modules!
 
 ```
 import unicorn_fy
@@ -63,23 +53,25 @@ Output:
 {'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT',
  'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847,
  'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True,
- 'unicorn_fied': ['binance', '0.14.2']}
+ 'unicorn_fied': ['binance', '0.16.0']}
 ```
 
 This lib is integrated into 
 [UNICORN Binance WebSocket API](https://www.lucit.tech/unicorn-binance-websocket-api.html) 
 and can be activated by setting parameter 
-[`output_default` of `BinanceWebSocketApiManager()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output_default#module-unicorn_binance_websocket_api.manager) 
+[`output_default` of `BinanceWebSocketApiManager()` to `UnicornFy`](https://oliver-zehentleitner.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output_default#module-unicorn_binance_websocket_api.manager) 
 or for specific streams with the parameter 
-[`output` of `create_stream()` to `UnicornFy`](https://lucit-systems-and-development.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output#unicorn_binance_websocket_api.manager.BinanceWebSocketApiManager.create_stream).
+[`output` of `create_stream()` to `UnicornFy`](https://oliver-zehentleitner.github.io/unicorn-binance-websocket-api/unicorn_binance_websocket_api.html?highlight=output#unicorn_binance_websocket_api.manager.BinanceWebSocketApiManager.create_stream).
 
 ## Get the right [logger](https://github.com/oliver-zehentleitner/unicorn-fy/blob/master/examples/_archive/example_logging.py):
 ```
 logging.getLogger("unicorn_fy")
 ```
 
-## Supported Exchanges
-### Websockets
+## What are the benefits of UnicornFy
+- Supported exchanges:
+
+***Websockets***
 
 | Exchange | Docs            | Status | 
 | -------- | --------------- | ------ |
@@ -98,29 +90,35 @@ logging.getLogger("unicorn_fy")
 | [Binance DEX](https://www.binance.org) ([API](https://docs.binance.org/)) | [`binance_org_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn-fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_org_websocket) | NEEDS_YOUR_HELP |
 | [Binance DEX Testnet](https://testnet.binance.org) ([API](https://docs.binance.org/)) | [`binance_org_websocket(stream_data_json)`](https://oliver-zehentleitner.github.io/unicorn-fy/unicorn_fy.html?highlight=binance_com#unicorn_fy.unicorn_fy.UnicornFy.binance_org_websocket) | NEEDS_YOUR_HELP |
 
-### REST
-- none
+***REST***
+
+None
+
+- Available as a package via `pip` and `conda` as precompiled C extension with stub files for improved Intellisense 
+  functions and source code for easier debugging of the source code. [To the installation.](#installation-and-upgrade)
+
+- Excessively tested on Linux, Mac and Windows
 
 If you like the project, please 
-[![star](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/star.png)](https://github.com/oliver-zehentleitner/unicorn-fy/stargazers) it on 
+[![star](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-fy/master/images/misc/star.png)](https://github.com/oliver-zehentleitner/unicorn-fy/stargazers) it on 
 [GitHub](https://github.com/oliver-zehentleitner/unicorn-fy)! 
 
 ## Installation and Upgrade
-The module requires Python 3.7.0 or above. 
+The module requires Python 3.8 and runs smoothly up to and including Python 3.13.
 
-For Anaconda we offer packages only from Python version 3.8 and higher.
+[There is no conda support until the migration to conda-forge.](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
 
 For the PyPy interpreter we offer packages only from Python version 3.9 and higher.
 
 The current dependencies are listed 
 [here](https://github.com/oliver-zehentleitner/unicorn-fy/blob/master/requirements.txt).
 
-If you run into errors during the installation take a look [here](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-suite/wiki/Installation).
+If you run into errors during the installation take a look [here](https://github.com/oliver-zehentleitner/unicorn-binance-suite/wiki/Installation).
 
 ### Packages are created automatically with GitHub Actions
 When a new release is to be created, we start two GitHubActions: 
 
-- [Build and Publish Anaconda](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/build_conda.yml)
+- [Build and Publish Anaconda](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
 - [Build and Publish GH+PyPi](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/build_wheels.yml) 
 
 Both start virtual Windows/Linux/Mac servers provided by GitHub in the cloud with preconfigured environments and 
@@ -156,6 +154,8 @@ this may take some time!
 `pip install unicorn-fy --upgrade`
 
 ### A Conda Package of the latest version with `conda` from [Anaconda](https://anaconda.org/lucit)
+[There is no conda support until the migration to conda-forge.](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
+
 The `unicorn-fy` package is also available as a Cython version for the `linux-64`, `osx-64` 
 and `win-64` architectures with [Conda](https://docs.conda.io/en/latest/) through the 
 [`lucit` channel](https://anaconda.org/lucit). 
@@ -164,6 +164,8 @@ For optimal compatibility and performance, it is recommended to source the neces
 [`conda-forge` channel](https://anaconda.org/conda-forge). 
 
 #### Installation
+[There is no conda support until the migration to conda-forge.](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
+
 ```
 conda config --add channels conda-forge
 conda config --add channels lucit
@@ -171,19 +173,21 @@ conda install -c lucit unicorn-fy
 ```
 
 #### Update
+[There is no conda support until the migration to conda-forge.](https://github.com/oliver-zehentleitner/unicorn-binance-suite/issues/17)
+
 `conda update -c lucit unicorn-fy`
 
-### From source of the latest release with PIP from [Github](https://github.com/oliver-zehentleitner/unicorn-fy)
+### From source of the latest release with PIP from [GitHub](https://github.com/oliver-zehentleitner/unicorn-fy)
 
 #### Linux, macOS, ...
 Run in bash:
 
-`pip install https://github.com/oliver-zehentleitner/unicorn-fy/archive/$(curl -s https://api.github.com/repos/lucit-systems-and-development/unicorn-fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
+`pip install https://github.com/oliver-zehentleitner/unicorn-fy/archive/$(curl -s https://api.github.com/repos/oliver-zehentleitner/unicorn-fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
 
 #### Windows
-Use the below command with the version (such as 0.14.2) you determined [here](https://github.com/oliver-zehentleitner/unicorn-fy/releases/latest):
+Use the below command with the version (such as 0.16.0) you determined [here](https://github.com/oliver-zehentleitner/unicorn-fy/releases/latest):
 
-`pip install https://github.com/oliver-zehentleitner/unicorn-fy/archive/0.14.2.tar.gz --upgrade`
+`pip install https://github.com/oliver-zehentleitner/unicorn-fy/archive/0.16.0.tar.gz --upgrade`
 
 ### From the latest source (dev-stage) with PIP from [GitHub](https://github.com/oliver-zehentleitner/unicorn-fy)
 This is not a release version and can not be considered to be stable!
@@ -202,7 +206,7 @@ or the [current master branch](https://github.com/oliver-zehentleitner/unicorn-f
 - ./setup.py
 
 ## Change Log
-[https://oliver-zehentleitner.github.io/unicorn-fychangelog.html](https://oliver-zehentleitner.github.io/unicorn-fychangelog.html)
+[https://oliver-zehentleitner.github.io/unicorn-fy/changelog.html](https://oliver-zehentleitner.github.io/unicorn-fy/changelog.html)
 
 ## Documentation
 - [General](https://oliver-zehentleitner.github.io/unicorn-fy)
@@ -225,28 +229,23 @@ or the [current master branch](https://github.com/oliver-zehentleitner/unicorn-f
 
 ## Receive Notifications
 To receive notifications on available updates you can 
-[![watch](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/watch.png)](https://github.com/oliver-zehentleitner/unicorn-fy/watchers) 
+[![watch](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-fy/master/images/misc/watch.png)](https://github.com/oliver-zehentleitner/unicorn-fy/watchers) 
 the repository on [GitHub](https://github.com/oliver-zehentleitner/unicorn-fy), write your 
 [own script](https://github.com/oliver-zehentleitner/unicorn-fy/blob/master/examples/_archive/example_version_of_this_package.py) 
 with using 
 [`is_update_available()`](https://oliver-zehentleitner.github.io/unicorn-fy/unicorn_fy.html?highlight=is_update#unicorn_fy.unicorn_fy.UnicornFy.is_update_availabe) 
  or you use the 
-[monitoring API service](https://github.com/LUCIT-Systems-and-Development/unicorn-binance-websocket-api/wiki/UNICORN-Monitoring-API-Service).
-
-Follow us on [GitHub](https://github.com/LUCIT-Systems-and-Development), [Medium](https://technopathy.club/),
-[YouTube](https://www.youtube.com/@LUCIT_Systems_and_Development), 
-[LinkedIn](https://www.linkedin.com/company/lucit-systems-and-development), 
-[X](https://twitter.com/LUCIT_SysDev) or [Facebook](https://www.facebook.com/lucit.systems.and.development)!
+[monitoring API service](https://github.com/oliver-zehentleitner/unicorn-binance-websocket-api/wiki/UNICORN-Monitoring-API-Service).
 
 ## How to report Bugs or suggest Improvements?
 [List of planned features](https://github.com/oliver-zehentleitner/unicorn-fy/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) - 
-click ![thumbs-up](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/thumbup.png) if you need one of them or suggest a new feature!
+click ![thumbs-up](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-fy/master/images/misc/thumbup.png) if you need one of them or suggest a new feature!
 
 Before you report a bug, [try the latest release](https://github.com/oliver-zehentleitner/unicorn-fy#installation-and-upgrade). 
 If the issue still exists, provide the error trace, OS and python version and explain how to reproduce the error. 
 A demo script is appreciated.
 
-If you dont find an issue related to your topic, please open a new issue:
+If you don't find an issue related to your topic, please open a new issue:
 [https://github.com/oliver-zehentleitner/unicorn-fy/issues](https://github.com/oliver-zehentleitner/unicorn-fy/issues)
 
 [Report a security bug!](https://github.com/oliver-zehentleitner/unicorn-fy/security/policy)
@@ -258,9 +257,9 @@ contribute follow
 [this guide](https://github.com/oliver-zehentleitner/unicorn-fy/blob/master/CONTRIBUTING.md).
  
 ### Contributors
-[![Contributors](https://contributors-img.web.app/image?repo=lucit-systems-and-development/unicorn-fy)](https://github.com/oliver-zehentleitner/unicorn-fy/graphs/contributors)
+[![Contributors](https://contributors-img.web.app/image?repo=oliver-zehentleitner/unicorn-fy)](https://github.com/oliver-zehentleitner/unicorn-fy/graphs/contributors)
 
-We ![love](https://raw.githubusercontent.com/lucit-systems-and-development/unicorn-fy/master/images/misc/heart.png) open source!
+We ![love](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-fy/master/images/misc/heart.png) open source!
 
 ## Disclaimer
 This project is for informational purposes only. You should not construe this information or any other material as 
@@ -273,9 +272,3 @@ jurisdiction.
 
 Under no circumstances will we be responsible or liable for any claims, damages, losses, expenses, costs or liabilities 
 of any kind, including but not limited to direct or indirect damages for loss of profits.
-
-## Commercial Support
-
-[![Get professional and fast support](https://raw.githubusercontent.com/LUCIT-Systems-and-Development/unicorn-binance-suite/master/images/support/LUCIT-get-professional-and-fast-support.png)](https://www.lucit.tech/get-support.html)
-
-***Do you need a developer, operator or consultant?*** [Contact us](https://www.lucit.tech/contact.html) for a non-binding initial consultation!

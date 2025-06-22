@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "unicorn-fy"
-version = "0.15.0"
+version = "0.16.0"
 description = "A Python SDK to convert received raw data from crypto exchange API endpoints into well-formed python dictionaries."
 authors = ["Oliver Zehentleitner"]
 license = "MIT"
