@@ -9,7 +9,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [How to upgrade to the latest version!](https://oliver-zehentleitner.github.io/unicorn-fyreadme.html#installation-and-upgrade)
 
-## 0.16.0.dev (development stage/unreleased/unstable)
+## 0.16.1.dev (development stage/unreleased/unstable)
+
+## 0.16.1
+### Added
+- build_wheels.yml:  
+  CIBW_ARCHS_LINUX: "x86_64 aarch64"
+  CIBW_ARCHS_MACOS: "x86_64 arm64 universal2"
+  CIBW_ARCHS_WINDOWS: "AMD64"
+  CIBW_MUSLLINUX_X86_64_IMAGE: "musllinux_1_1"
 
 ## 0.16.0
 ### Added

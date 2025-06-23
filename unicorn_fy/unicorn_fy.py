@@ -46,7 +46,7 @@ import time
 import ujson as json
 
 __app_name__: str = "unicorn-fy"
-__version__: str = "0.16.0"
+__version__: str = "0.16.1"
 __logger__: logging.getLogger = logging.getLogger("unicorn_fy")
 logger = __logger__
 

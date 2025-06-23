@@ -53,7 +53,7 @@ Output:
 {'stream_type': 'btcusdt@trade', 'event_type': 'trade', 'event_time': 1556876873656, 'symbol': 'BTCUSDT',
  'trade_id': 117727701, 'price': '5786.76000000', 'quantity': '0.03200500', 'buyer_order_id': 341831847,
  'seller_order_id': 341831876, 'trade_time': 1556876873648, 'is_market_maker': True, 'ignore': True,
- 'unicorn_fied': ['binance', '0.16.0']}
+ 'unicorn_fied': ['binance', '0.16.1']}
 ```
 
 This lib is integrated into 
@@ -185,9 +185,9 @@ Run in bash:
 `pip install https://github.com/oliver-zehentleitner/unicorn-fy/archive/$(curl -s https://api.github.com/repos/oliver-zehentleitner/unicorn-fy/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")').tar.gz --upgrade`
 
 #### Windows
-Use the below command with the version (such as 0.16.0) you determined [here](https://github.com/oliver-zehentleitner/unicorn-fy/releases/latest):
+Use the below command with the version (such as 0.16.1) you determined [here](https://github.com/oliver-zehentleitner/unicorn-fy/releases/latest):
 
-`pip install https://github.com/oliver-zehentleitner/unicorn-fy/archive/0.16.0.tar.gz --upgrade`
+`pip install https://github.com/oliver-zehentleitner/unicorn-fy/archive/0.16.1.tar.gz --upgrade`
 
 ### From the latest source (dev-stage) with PIP from [GitHub](https://github.com/oliver-zehentleitner/unicorn-fy)
 This is not a release version and can not be considered to be stable!
