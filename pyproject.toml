@@ -20,7 +20,7 @@ repository = "https://github.com/oliver-zehentleitner/unicorn-fy"
 'Telegram' = 'https://t.me/unicorndevs'
 
 [tool.poetry.dependencies]
-python = ">=3.8.0,<3.13"
+python = ">=3.8.0"
 Cython = "*"
 requests = "*"
 simplejson = "*"
