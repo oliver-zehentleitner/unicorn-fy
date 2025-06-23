@@ -13,6 +13,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ## 0.16.0
 ### Added
+- Python 3.13 support
+
+## 0.15.0
+### Added
 - `__version__` and made use of it.
 ### Changed
 - Moved from https://github.com/LUCIT-Systems-and-Development/ to https://github.com/oliver-zehentleitner
