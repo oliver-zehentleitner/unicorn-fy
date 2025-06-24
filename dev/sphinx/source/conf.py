@@ -18,8 +18,8 @@ sys.path.insert(0, os.path.abspath('../../..'))
 # -- Project information -----------------------------------------------------
 
 project = 'unicorn-fy'
-copyright = '2023-2023, LUCIT Systems and Development. All Rights Reserved.'
-author = 'LUCIT Systems and Development'
+copyright = '2019-2025, Oliver Zehentleitner All Rights Reserved.'
+author = 'Oliver Zehentleitner'
 
 # The full version, including alpha/beta/rc tags
 release = '0.16.1'
