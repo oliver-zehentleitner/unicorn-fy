@@ -103,7 +103,7 @@ python setup.py bdist_wheel
 
 ## Code Conventions
 
-- **File header:** Always include the full MIT license block with author/copyright (2019-2025)
+- **File header:** Always include the full MIT license block with author/copyright (2019-2026)
 - **Encoding:** UTF-8, UNIX line endings
 - **Logging:** `logging.getLogger("unicorn_fy")`
 - **JSON:** `orjson` imported as `import orjson as json` — suite-wide standard, do not switch to `ujson` or stdlib `json`
