@@ -27,7 +27,7 @@
 
 Normalizes raw responses from crypto exchange APIs (Binance & co.) into consistent, cleanly-typed Python dictionaries. A transformation layer that makes exchange data interchangeable instead of exchange-specific.
 
-Part of ['UNICORN Binance Suite'](https://github.com/oliver-zehentleitner/unicorn-binance-suite).
+Part of '[UNICORN Binance Suite](https://blog.technopathy.club/page/unicorn-binance-suite)'.
 
 ```
 import unicorn_fy
