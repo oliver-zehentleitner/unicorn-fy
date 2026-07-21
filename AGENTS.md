@@ -3,6 +3,10 @@
 > **End-user cheatsheet for AI-assisted consumption:** [`llms.txt`](llms.txt) — use that one if you're writing code *against* this library.
 > **This file** is for AI agents working *on* this repo itself.
 
+## Why things are the way they are
+
+See [`context/index.md`](context/index.md) before making non-trivial changes — it points to the reasoning behind design decisions, rejected alternatives, and constraints that aren't visible in the code. If `AGENTS.local.md` exists in this repo, that's personal/local notes, not relevant to anyone else.
+
 ## Planning & Backlog
 
 Open development tasks and decisions are tracked in **[TASKS.md](TASKS.md)**.
@@ -56,7 +60,7 @@ dev/sphinx/                # Sphinx source for rebuilding docs
 
 Managed in `requirements.txt`, `setup.py`, and `pyproject.toml` — **all three must be kept in sync manually**:
 
-- `orjson` — fast JSON serialization (suite-wide standard)
+- `orjson` — fast JSON serialization (suite-wide standard, replaced `ujson` — see [`context/history.md`](context/history.md))
 - `requests` — HTTP for version checks
 - `Cython` — C extension compilation (release builds only)
 
@@ -97,7 +101,8 @@ python setup.py bdist_wheel
 - `unit-tests.yml` — Python 3.9–3.14 on Ubuntu, Codecov upload
 - `build_wheels.yml` — Manual trigger, builds wheels for Linux/macOS/Windows, PyPI release
 - `codeql-analysis.yml` — Security scanning
-- `build_conda.yml` — Conda package build
+
+No in-repo conda build — conda-forge's own feedstock is the only conda source (see [`context/history.md`](context/history.md)).
 
 ---
 
@@ -117,6 +122,8 @@ python setup.py bdist_wheel
 | Class | File | Purpose |
 |---|---|---|
 | `UnicornFy` | `unicorn_fy/unicorn_fy.py` | All conversion logic; static methods per exchange |
+
+Why unrecognized event shapes are tolerated rather than raised, and how the WS API userData envelope is handled: [`context/adapters.md`](context/adapters.md).
 
 ---
 
@@ -141,3 +148,8 @@ result = ufy.binance_com_websocket(raw_json_string)
 UnicornFy is used automatically by `unicorn-binance-websocket-api` when:
 - `output_default="UnicornFy"` is set on `BinanceWebSocketApiManager()`
 - `output="UnicornFy"` is set on individual `create_stream()` calls
+
+<!-- keep-the-why:config -->
+- context: `context/`
+- init: complete
+<!-- /keep-the-why:config -->
