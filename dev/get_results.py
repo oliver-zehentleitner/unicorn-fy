@@ -43,18 +43,22 @@ import logging
 import os
 
 logging.getLogger("unicorn_fy")
-logging.basicConfig(level=logging.DEBUG,
-                    filename=os.path.basename(__file__) + '.log',
-                    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
-                    style="{")
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename=os.path.basename(__file__) + ".log",
+    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
+    style="{",
+)
 
 # To use this library you need a valid UNICORN Binance Suite License:
 # https://technopathy.club/-87b0088124a8
 binance_websocket_api_manager = BinanceWebSocketApiManager(exchange="binance.com")
-stream_id = binance_websocket_api_manager.create_stream(['ticker'], ['btcusdt', 'bnbbtc', 'ethbtc'])
-#binance_websocket_api_manager.create_stream(['miniTicker'], ['btcusdt', 'bnbbtc', 'ethbtc'])
-#binance_websocket_api_manager.create_stream(['!miniTicker'], ['arr'])
-#binance_websocket_api_manager.create_stream(['!ticker'], ['arr'])
+stream_id = binance_websocket_api_manager.create_stream(
+    ["ticker"], ["btcusdt", "bnbbtc", "ethbtc"]
+)
+# binance_websocket_api_manager.create_stream(['miniTicker'], ['btcusdt', 'bnbbtc', 'ethbtc'])
+# binance_websocket_api_manager.create_stream(['!miniTicker'], ['arr'])
+# binance_websocket_api_manager.create_stream(['!ticker'], ['arr'])
 
 time.sleep(10)
 binance_websocket_api_manager.get_stream_subscriptions(stream_id)
@@ -63,7 +67,11 @@ print(str(binance_websocket_api_manager.get_results_from_endpoints()))
 time.sleep(5)
 
 while True:
-    oldest_stream_data_from_stream_buffer = binance_websocket_api_manager.pop_stream_data_from_stream_buffer()
+    oldest_stream_data_from_stream_buffer = (
+        binance_websocket_api_manager.pop_stream_data_from_stream_buffer()
+    )
     if oldest_stream_data_from_stream_buffer:
-        oldest_stream_data_from_stream_buffer = UnicornFy.binance_com_websocket(oldest_stream_data_from_stream_buffer)
+        oldest_stream_data_from_stream_buffer = UnicornFy.binance_com_websocket(
+            oldest_stream_data_from_stream_buffer
+        )
         print(oldest_stream_data_from_stream_buffer)

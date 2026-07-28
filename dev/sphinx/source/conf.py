@@ -12,17 +12,18 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../../..'))
+
+sys.path.insert(0, os.path.abspath("../../.."))
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'unicorn-fy'
-copyright = '2019-2025, Oliver Zehentleitner All Rights Reserved.'
-author = 'Oliver Zehentleitner'
+project = "unicorn-fy"
+copyright = "2019-2025, Oliver Zehentleitner All Rights Reserved."
+author = "Oliver Zehentleitner"
 
 # The full version, including alpha/beta/rc tags
-release = '0.17.2'
+release = "0.17.2"
 
 html_last_updated_fmt = "%b %d %Y at %H:%M (CET)"
 
@@ -32,23 +33,23 @@ html_last_updated_fmt = "%b %d %Y at %H:%M (CET)"
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.githubpages',
-    'myst_parser',
-    'sphinx_markdown_tables',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.viewcode',
+    "sphinx.ext.autodoc",
+    "sphinx.ext.githubpages",
+    "myst_parser",
+    "sphinx_markdown_tables",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.viewcode",
 ]
 
-source_suffix = ['.rst', '.md']
+source_suffix = [".rst", ".md"]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ["_templates"]
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 language = "en"
 
@@ -57,20 +58,22 @@ language = "en"
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'python_docs_theme_ubs'
-html_context = {'github_user_name': 'LUCIT-Systems-and-Development',
-                'github_repo_name': 'unicorn-fy',
-                'project_name': project,
-                'matomo_url': "https://webmon.lucit.services/matomo.php?idsite=7&amp;rec=1",
-                'freshchat_src': "//eu.fw-cdn.com/10659511/361973.js",
-                'lucit': True}
+html_theme = "python_docs_theme_ubs"
+html_context = {
+    "github_user_name": "LUCIT-Systems-and-Development",
+    "github_repo_name": "unicorn-fy",
+    "project_name": project,
+    "matomo_url": "https://webmon.lucit.services/matomo.php?idsite=7&amp;rec=1",
+    "freshchat_src": "//eu.fw-cdn.com/10659511/361973.js",
+    "lucit": True,
+}
 
 myst_heading_anchors = 3
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ["_static"]
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -83,12 +86,12 @@ html_static_path = ['_static']
 # html_sidebars = {}
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = "index"
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'unicorn-fydoc'
+htmlhelp_basename = "unicorn-fydoc"
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -97,15 +100,12 @@ latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
     # 'papersize': 'letterpaper',
-
     # The font size ('10pt', '11pt' or '12pt').
     #
     # 'pointsize': '10pt',
-
     # Additional stuff for the LaTeX preamble.
     #
     # 'preamble': '',
-
     # Latex figure (float) alignment
     #
     # 'figure_align': 'htbp',
@@ -115,8 +115,13 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'unicorn-fy.tex', 'unicorn-fy Documentation',
-     'LUCIT Systems and Development', 'manual'),
+    (
+        master_doc,
+        "unicorn-fy.tex",
+        "unicorn-fy Documentation",
+        "LUCIT Systems and Development",
+        "manual",
+    ),
 ]
 
 
@@ -124,10 +129,7 @@ latex_documents = [
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'unicorn-fy', 'unicorn-fy Documentation',
-     [author], 1)
-]
+man_pages = [(master_doc, "unicorn-fy", "unicorn-fy Documentation", [author], 1)]
 
 
 # -- Options for Texinfo output ----------------------------------------------
@@ -136,9 +138,15 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'unicorn-fy', 'unicorn-fy Documentation',
-     author, 'unicorn-fy', 'One line description of project.',
-     'Miscellaneous'),
+    (
+        master_doc,
+        "unicorn-fy",
+        "unicorn-fy Documentation",
+        author,
+        "unicorn-fy",
+        "One line description of project.",
+        "Miscellaneous",
+    ),
 ]
 
 
@@ -157,7 +165,7 @@ epub_title = project
 # epub_uid = ''
 
 # A list of files that should not be packed into the epub file.
-epub_exclude_files = ['search.docs']
+epub_exclude_files = ["search.docs"]
 
 
 # -- Extension configuration -------------------------------------------------
