@@ -3,7 +3,8 @@
 ## WS API userData envelope unwrap
 
 **Status:** active
-**Confirmed** (commit `1503d59`, merge `3b2e144`, 2026-04-10)
+**Evidence:** confirmed
+**Source:** commit `1503d59`, merge `3b2e144`, 2026-04-10
 
 Binance removed the REST listenKey endpoints for Spot/Margin in February 2026. UBWA switched to the WS API subscription flow instead, which wraps userData events in `{"subscriptionId": 0, "event": {...}}`. `binance_websocket()` now unwraps that envelope before handing the payload to the existing normalization pipeline.
 
@@ -12,7 +13,8 @@ Binance removed the REST listenKey endpoints for Spot/Margin in February 2026. U
 ## Catch-all replacing an event-type whitelist
 
 **Status:** active
-**Confirmed** (commit `31d7fa1`, fixes #41)
+**Evidence:** confirmed
+**Source:** commit `31d7fa1`, fixes #41
 
 Previously, only explicitly-listed event types were unwrapped/normalized; anything else fell through and crashed with `KeyError: 'data'`. Replaced with a catch-all: any payload with a top-level `e` key and no `data` wrapper (e.g. `listenKeyExpired`) is now wrapped, instead of relying on an enumerated list of known event types.
 
@@ -23,6 +25,7 @@ Previously, only explicitly-listed event types were unwrapped/normalized; anythi
 ## Init value `False` → `{}`
 
 **Status:** active
-**Confirmed** (commit `f8d6341`, fixes #44)
+**Evidence:** confirmed
+**Source:** commit `f8d6341`, fixes #44
 
 `unicorn_fied_data` was initialized to `False`; an unmatched event type left it as `False`, and the next step (item assignment) crashed with `TypeError: bool object does not support item assignment`. Changed the default to `{}`.
