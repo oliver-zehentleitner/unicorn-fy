@@ -46,22 +46,27 @@ import sys
 import time
 import threading
 
-
 # https://docs.python.org/3/library/logging.html#logging-levels
 logging.getLogger("unicorn_fy")
-logging.basicConfig(level=logging.INFO,
-                    filename=os.path.basename(__file__) + '.log',
-                    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
-                    style="{")
+logging.basicConfig(
+    level=logging.INFO,
+    filename=os.path.basename(__file__) + ".log",
+    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
+    style="{",
+)
 
 
 def print_stream_data_from_stream_buffer(binance_websocket_api_manager):
     while True:
         if binance_websocket_api_manager.is_manager_stopping():
             exit(0)
-        oldest_stream_data_from_stream_buffer = binance_websocket_api_manager.pop_stream_data_from_stream_buffer()
+        oldest_stream_data_from_stream_buffer = (
+            binance_websocket_api_manager.pop_stream_data_from_stream_buffer()
+        )
         if oldest_stream_data_from_stream_buffer is not None:
-            unicorn_fied_data = UnicornFy.binance_com_websocket(oldest_stream_data_from_stream_buffer)
+            unicorn_fied_data = UnicornFy.binance_com_websocket(
+                oldest_stream_data_from_stream_buffer
+            )
             print(str(unicorn_fied_data))
         else:
             time.sleep(0.01)
@@ -70,10 +75,33 @@ def print_stream_data_from_stream_buffer(binance_websocket_api_manager):
 binance_api_key = ""
 binance_api_secret = ""
 
-channels = {'aggTrade', 'trade', 'kline_1m', 'kline_5m', 'kline_15m', 'kline_30m', 'kline_1h', 'kline_2h', 'kline_4h',
-            'kline_6h', 'kline_8h', 'kline_12h', 'kline_1d', 'kline_3d', 'kline_1w', 'kline_1M', 'miniTicker',
-            'ticker', 'bookTicker', 'depth5', 'depth10', 'depth20', 'depth', 'depth@100ms'}
-arr_channels = {'!miniTicker', '!ticker', '!bookTicker'}
+channels = {
+    "aggTrade",
+    "trade",
+    "kline_1m",
+    "kline_5m",
+    "kline_15m",
+    "kline_30m",
+    "kline_1h",
+    "kline_2h",
+    "kline_4h",
+    "kline_6h",
+    "kline_8h",
+    "kline_12h",
+    "kline_1d",
+    "kline_3d",
+    "kline_1w",
+    "kline_1M",
+    "miniTicker",
+    "ticker",
+    "bookTicker",
+    "depth5",
+    "depth10",
+    "depth20",
+    "depth",
+    "depth@100ms",
+}
+arr_channels = {"!miniTicker", "!ticker", "!bookTicker"}
 markets = []
 
 try:
@@ -85,14 +113,16 @@ except requests.exceptions.ConnectionError:
     print("No internet connection?")
     sys.exit(1)
 
-worker_thread = threading.Thread(target=print_stream_data_from_stream_buffer, args=(ubwa,))
+worker_thread = threading.Thread(
+    target=print_stream_data_from_stream_buffer, args=(ubwa,)
+)
 worker_thread.start()
 
 data = ubra.get_all_tickers()
 for item in data[0:512]:
-    markets.append(item['symbol'])
+    markets.append(item["symbol"])
 
-#userdata_stream_id = ubwa.create_stream(["!userData"], ["arr"], api_key=binance_api_key, api_secret=binance_api_secret)
+# userdata_stream_id = ubwa.create_stream(["!userData"], ["arr"], api_key=binance_api_key, api_secret=binance_api_secret)
 arr_stream_id = ubwa.create_stream(arr_channels, "arr")
 
 for channel in channels:
@@ -101,6 +131,6 @@ for channel in channels:
 stream_id_trade = ubwa.get_stream_id_by_label("trade")
 ubwa.get_stream_subscriptions(stream_id_trade)
 
-#while True:
+# while True:
 #    ubwa.print_summary()
 #    time.sleep(1)

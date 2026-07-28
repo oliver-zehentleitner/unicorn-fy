@@ -41,23 +41,69 @@ import logging
 import os
 
 logging.getLogger("unicorn_fy")
-logging.basicConfig(level=logging.DEBUG,
-                    filename=os.path.basename(__file__) + '.log',
-                    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
-                    style="{")
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename=os.path.basename(__file__) + ".log",
+    format="{asctime} [{levelname:8}] {process} {thread} {module}: {message}",
+    style="{",
+)
 
 
 # To use this library you need a valid UNICORN Binance Suite License:
 # https://technopathy.club/-87b0088124a8
-ubwa = unicorn_binance_websocket_api.BinanceWebSocketApiManager(exchange="binance.com",
-                                                                output_default="UnicornFy")
+ubwa = unicorn_binance_websocket_api.BinanceWebSocketApiManager(
+    exchange="binance.com", output_default="UnicornFy"
+)
 
-markets = ['bnbbtc', 'ethbtc', 'btcusdt', 'bchabcusdt', 'xrpusdt', 'rvnbtc', 'ltcusdt', 'adausdt', 'eosusdt',
-           'neousdt', 'bnbusdt', 'adabtc', 'ethusdt', 'trxbtc', 'trxbtc', 'bchabcbtc', 'ltcbtc', 'xrpbtc',
-           'ontbtc', 'bttusdt', 'eosbtc', 'xlmbtc', 'bttbtc', 'tusdusdt', 'xlmusdt', 'qkcbtc', 'zrxbtc',
-           'neobtc', 'adaeth', 'icxusdt', 'btctusd', 'icxbtc', 'btcusdc', 'wanbtc', 'zecbtc', 'wtcbtc']
+markets = [
+    "bnbbtc",
+    "ethbtc",
+    "btcusdt",
+    "bchabcusdt",
+    "xrpusdt",
+    "rvnbtc",
+    "ltcusdt",
+    "adausdt",
+    "eosusdt",
+    "neousdt",
+    "bnbusdt",
+    "adabtc",
+    "ethusdt",
+    "trxbtc",
+    "trxbtc",
+    "bchabcbtc",
+    "ltcbtc",
+    "xrpbtc",
+    "ontbtc",
+    "bttusdt",
+    "eosbtc",
+    "xlmbtc",
+    "bttbtc",
+    "tusdusdt",
+    "xlmusdt",
+    "qkcbtc",
+    "zrxbtc",
+    "neobtc",
+    "adaeth",
+    "icxusdt",
+    "btctusd",
+    "icxbtc",
+    "btcusdc",
+    "wanbtc",
+    "zecbtc",
+    "wtcbtc",
+]
 
-channels = ['trade', 'kline_1m', 'kline_5m', 'kline_15m', 'kline_30m', 'kline_1h', 'kline_12h', 'depth5']
+channels = [
+    "trade",
+    "kline_1m",
+    "kline_5m",
+    "kline_15m",
+    "kline_30m",
+    "kline_1h",
+    "kline_12h",
+    "depth5",
+]
 
 ubwa.create_stream(channels, markets)
 

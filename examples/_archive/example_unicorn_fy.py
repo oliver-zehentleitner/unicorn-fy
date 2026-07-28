@@ -41,18 +41,22 @@ from unicorn_fy.unicorn_fy import UnicornFy
 import json
 
 # recevied data format from binance:
-received_stream_data_json = {"stream": "btcusdt@trade",
-                             "data": {"e": "trade",
-                                      "E": 1556876873656,
-                                      "s": "BTCUSDT",
-                                      "t": 117727701,
-                                      "p": "5786.76000000",
-                                      "q": "0.03200500",
-                                      "b": 341831847,
-                                      "a": 341831876,
-                                      "T": 1556876873648,
-                                      "m": True,
-                                      "M": True}}
+received_stream_data_json = {
+    "stream": "btcusdt@trade",
+    "data": {
+        "e": "trade",
+        "E": 1556876873656,
+        "s": "BTCUSDT",
+        "t": 117727701,
+        "p": "5786.76000000",
+        "q": "0.03200500",
+        "b": 341831847,
+        "a": 341831876,
+        "T": 1556876873648,
+        "m": True,
+        "M": True,
+    },
+}
 
 received_stream_data_json = json.dumps(received_stream_data_json)
 
@@ -65,30 +69,34 @@ print("unicorn_fied:")
 print(unicorn_fied_stream_data)
 
 # recevied data format from binance:
-received_stream_data_json = {"stream": "ethbtc@ticker",
-                             "data": {"e": "24hrTicker",
-                                      "E": 1556877162244,
-                                      "s": "ETHBTC",
-                                      "p": "-0.00057000",
-                                      "P": "-1.926",
-                                      "w": "0.02918378",
-                                      "x": "0.02959500",
-                                      "c": "0.02902900",
-                                      "Q": "0.51600000",
-                                      "b": "0.02901600",
-                                      "B": "0.47500000",
-                                      "a": "0.02903000",
-                                      "A": "5.48000000",
-                                      "o": "0.02959900",
-                                      "h": "0.02963400",
-                                      "l": "0.02820900",
-                                      "v": "222630.30500000",
-                                      "q": "6497.19329404",
-                                      "O": 1556790762240,
-                                      "C": 1556877162240,
-                                      "F": 119982523,
-                                      "L": 120137417,
-                                      "n": 154895}}
+received_stream_data_json = {
+    "stream": "ethbtc@ticker",
+    "data": {
+        "e": "24hrTicker",
+        "E": 1556877162244,
+        "s": "ETHBTC",
+        "p": "-0.00057000",
+        "P": "-1.926",
+        "w": "0.02918378",
+        "x": "0.02959500",
+        "c": "0.02902900",
+        "Q": "0.51600000",
+        "b": "0.02901600",
+        "B": "0.47500000",
+        "a": "0.02903000",
+        "A": "5.48000000",
+        "o": "0.02959900",
+        "h": "0.02963400",
+        "l": "0.02820900",
+        "v": "222630.30500000",
+        "q": "6497.19329404",
+        "O": 1556790762240,
+        "C": 1556877162240,
+        "F": 119982523,
+        "L": 120137417,
+        "n": 154895,
+    },
+}
 
 received_stream_data_json = json.dumps(received_stream_data_json)
 
@@ -99,5 +107,3 @@ print(received_stream_data_json)
 unicorn_fied_stream_data = UnicornFy.binance_com_websocket(received_stream_data_json)
 print("unicorn_fied:")
 print(unicorn_fied_stream_data)
-
-
