@@ -6,6 +6,7 @@
 [![Conda-Forge Downloads](https://img.shields.io/conda/dn/conda-forge/unicorn-fy?color=blue&label=downloads)](https://anaconda.org/conda-forge/unicorn-fy)
 [![License](https://img.shields.io/github/license/oliver-zehentleitner/unicorn-fy.svg?color=blue)](https://oliver-zehentleitner.github.io/unicorn-fylicense.html)
 [![Supported Python Version](https://img.shields.io/pypi/pyversions/unicorn_fy.svg)](https://www.python.org/downloads/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![PyPI - Status](https://img.shields.io/pypi/status/unicorn_fy.svg)](https://github.com/oliver-zehentleitner/unicorn-fy/issues)
 [![codecov](https://codecov.io/gh/oliver-zehentleitner/unicorn-fy/branch/master/graph/badge.svg?token=5I03AZ3F5S)](https://codecov.io/gh/oliver-zehentleitner/unicorn-fy)
 [![CodeQL](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/codeql-analysis.yml)
@@ -17,7 +18,6 @@
 [![Github](https://img.shields.io/badge/source-github-cbc2c8)](https://github.com/oliver-zehentleitner/unicorn-fy)
 [![Telegram](https://img.shields.io/badge/community-telegram-41ab8c)](https://t.me/unicorndevs)
 [![Reddit](https://img.shields.io/badge/community-reddit-41ab8c)](https://www.reddit.com/r/UNICORNBinanceSuite)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Keep the Why](https://keepthewhy.com/assets/badge.svg)](https://keepthewhy.com)
 
 [![UBS-Banner](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-binance-suite/master/images/logo/UBS-Banner-Readme.png)](https://blog.technopathy.club/page/unicorn-binance-suite)
