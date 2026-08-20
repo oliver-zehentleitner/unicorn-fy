@@ -152,6 +152,6 @@ UnicornFy is used automatically by `unicorn-binance-websocket-api` when:
 <!-- keep-the-why:config -->
 - context: `context/`
 - init: complete
-- context-schema: 0.8.0
+- context-schema: 0.9.0
 - capture-confirmation: confirm-when-unsure
 <!-- /keep-the-why:config -->
