@@ -2,6 +2,7 @@
 
 ## Three-org lineage
 
+**Type:** decision
 **Status:** superseded — repo now lives under `oliver-zehentleitner`, MIT-licensed
 **Evidence:** confirmed
 **Source:** git history
@@ -14,6 +15,7 @@ The repo's earliest commits (from 2019-04, e.g. `562af8e`) reference `github.com
 
 ## `orjson` as the suite-wide JSON standard
 
+**Type:** decision
 **Status:** active
 **Evidence:** confirmed
 **Source:** commit `637911a`
