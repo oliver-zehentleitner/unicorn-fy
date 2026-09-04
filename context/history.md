@@ -2,8 +2,10 @@
 
 ## Three-org lineage
 
+> Superseded — repo now lives under `oliver-zehentleitner`, MIT-licensed.
+
 **Type:** decision
-**Status:** superseded — repo now lives under `oliver-zehentleitner`, MIT-licensed
+**Status:** superseded
 **Evidence:** confirmed
 **Source:** git history
 
