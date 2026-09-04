@@ -11,6 +11,7 @@
 [![codecov](https://codecov.io/gh/oliver-zehentleitner/unicorn-fy/branch/master/graph/badge.svg?token=5I03AZ3F5S)](https://codecov.io/gh/oliver-zehentleitner/unicorn-fy)
 [![CodeQL](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/codeql-analysis.yml)
 [![Unit Tests](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/unit-tests.yml)
+[![ktw-lint](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/ktw-lint.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/ktw-lint.yml)
 [![Build and Publish GH+PyPi](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/build_wheels.yml/badge.svg)](https://github.com/oliver-zehentleitner/unicorn-fy/actions/workflows/build_wheels.yml)
 [![Conda-Forge Build](https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/unicorn-fy-feedstock?branchName=main)](https://github.com/conda-forge/unicorn-fy-feedstock)
 [![Read the Docs](https://img.shields.io/badge/read-%20docs-yellow)](https://oliver-zehentleitner.github.io/unicorn-fy)
