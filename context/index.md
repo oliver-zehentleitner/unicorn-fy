@@ -22,7 +22,7 @@
 
 ## A
 
-- [adapters.md](adapters.md) — why the userData envelope gets unwrapped, and the shift from an event-type whitelist to a catch-all
+- [adapters.md](adapters.md) — why the userData envelope gets unwrapped, the shift from an event-type whitelist to a catch-all, and why shape mismatches don't fail
 
 ## B
 
@@ -53,8 +53,6 @@
 ## N
 
 ## O
-
-- [open-questions.md](open-questions.md) — the bare `except KeyError: pass` pattern, and how it sits against the suite's fail-loud convention
 
 ## P
 
