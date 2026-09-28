@@ -2,6 +2,7 @@
 
 ## Bare `except KeyError: pass` blocks vs. the suite's fail-loud convention
 
+**Id:** 79b64d5f-c693-4a82-9928-a8182c609124
 **Type:** undefined — open question awaiting maintainer input, not yet classifiable as decision/workaround/incident/constraint
 **Status:** open
 **Evidence:** unknown

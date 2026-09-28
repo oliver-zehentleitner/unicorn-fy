@@ -2,6 +2,7 @@
 
 ## WS API userData envelope unwrap
 
+**Id:** 67603c5a-14d0-4559-8709-34bcea467b02
 **Type:** workaround
 **Status:** active
 **Evidence:** confirmed
@@ -13,6 +14,7 @@ Binance removed the REST listenKey endpoints for Spot/Margin in February 2026. U
 
 ## Catch-all replacing an event-type whitelist
 
+**Id:** 86f7088c-eb13-45cd-90b8-73a365d4822a
 **Type:** decision
 **Status:** active
 **Evidence:** confirmed
@@ -26,6 +28,7 @@ Previously, only explicitly-listed event types were unwrapped/normalized; anythi
 
 ## Init value `False` → `{}`
 
+**Id:** 35a07689-77e0-4f96-bf06-b630e424f152
 **Type:** incident
 **Status:** active
 **Evidence:** confirmed
