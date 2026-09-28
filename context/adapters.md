@@ -19,6 +19,7 @@ Binance removed the REST listenKey endpoints for Spot/Margin in February 2026. U
 **Status:** active
 **Evidence:** confirmed
 **Source:** commit `31d7fa1`, fixes #41
+**See:** open-questions.md#bare-except-keyerror-pass-blocks-vs-the-suites-fail-loud-convention — 79b64d5f-c693-4a82-9928-a8182c609124 — as of 2026-09-28
 
 Previously, only explicitly-listed event types were unwrapped/normalized; anything else fell through and crashed with `KeyError: 'data'`. Replaced with a catch-all: any payload with a top-level `e` key and no `data` wrapper (e.g. `listenKeyExpired`) is now wrapped, instead of relying on an enumerated list of known event types.
 
