@@ -267,6 +267,8 @@ We ![love](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-fy/mas
 This project provides a [`llms.txt`](https://raw.githubusercontent.com/oliver-zehentleitner/unicorn-fy/refs/heads/master/llms.txt) file for AI tools (ChatGPT, Claude, Copilot, etc.) with structured 
 usage instructions, code examples and module routing.
 
+The reasoning behind the code — decisions, rejected alternatives, workarounds and constraints — is kept in [`context/`](https://github.com/oliver-zehentleitner/unicorn-fy/tree/master/context), maintained with [Keep the Why](https://keepthewhy.com). Coding agents read [`context/index.md`](https://github.com/oliver-zehentleitner/unicorn-fy/blob/master/context/index.md) to learn why the project is built the way it is before they change it. The same knowledge is part of the docs as [Why this project is built this way](https://oliver-zehentleitner.github.io/unicorn-fy/context/index.html), and the [Keep the Why Dashboard](https://oliver-zehentleitner.github.io/unicorn-fy/keep-the-why-dashboard/) shows it with its Git history.
+
 ---
 
 ## Disclaimer
